@@ -1,0 +1,53 @@
+name: Kubernetes Deployment - Client
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'client/*'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Build_Deploy_Client:
+      runs-on: ubuntu-latest
+
+  strategy:
+    matrix:
+      node-version: [10.x]
+
+  env:
+    CI_FIREBASE_MESSAGE: ${{ github.event.head_commit.message }} - ${{ github.event.head_commit.url }}/checks
+
+  steps:
+    - name: Checkout Repo
+      uses: actions/checkout@master
+              ## Setup node
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    ## Install dependencies
+    - name: yarn install
+      run: |
+        yarn
+
+    ## Test
+    - name: Run tests
+      run: yarn run test
+      env:
+        CI: false
+
+    ## Build
+    - name: Build
+      run: yarn run build
+      env:
+        CI: false
+
+    ## Deploy
+    - name: Deploy to Firebase
+      uses: w9jds/firebase-action@master
+      with:
+        args: deploy --only hosting --project=ahapte-vet
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

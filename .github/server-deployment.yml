@@ -1,0 +1,7 @@
+name: Kubernetes Deployment - Server
+
+on:
+  push:
+    branches: [ master ]
+    paths:
+      - 'server/*'
