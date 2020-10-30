@@ -1,10 +1,45 @@
 steps:
 # Build the container image
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/server:latest', './server']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/server-development:latest', './server']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/$PROJECT_ID/client:latest', './client']
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/client-development:latest', './client']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/server:latest']
+  args: ['push', 'gcr.io/$PROJECT_ID/server-development:latest']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/$PROJECT_ID/client:latest']
+  args: ['push', 'gcr.io/$PROJECT_ID/client-development:latest']
+
+#This command is calling docker image from Google Container Repo "gcr.io/cloud-builders/docker"
+#in arguments it is calling cloud run with deploy action
+#and passing service name = cloudrunservice
+#and image name = gcr.io/$PROJECT_ID/hello-app 
+#This image should be there in GCR
+#next argument passes region = 'us-central1' where it has to be deployed
+#platform is managed and it allows unauthenticated access
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'cloudrunservice'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/server-development'
+  - '--region'
+  - 'asia-east1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+- name: 'gcr.io/cloud-builders/gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'cloudrunservice'
+  - '--image'
+  - 'gcr.io/$PROJECT_ID/client-development'
+  - '--region'
+  - 'asia-east1'
+  - '--platform'
+  - 'managed'
+  - '--allow-unauthenticated'
+images:
+  - 'gcr.io/$PROJECT_ID/client-development'
+  - 'gcr.io/$PROJECT_ID/server-development'
