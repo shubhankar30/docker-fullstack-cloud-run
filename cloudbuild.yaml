@@ -20,7 +20,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'cloudrunservice'
+  - 'server-development'
   - '--image'
   - 'gcr.io/$PROJECT_ID/server-development'
   - '--region'
@@ -32,7 +32,7 @@ steps:
   args:
   - 'run'
   - 'deploy'
-  - 'cloudrunservice'
+  - 'client-development'
   - '--image'
   - 'gcr.io/$PROJECT_ID/client-development'
   - '--region'
