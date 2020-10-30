@@ -37,10 +37,10 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    if(Array.isArray(this.state.seenIndexes) && this.state.seenIndexes.length > 0) {
-      return this.state.seenIndexes.map(number => number).join(', ');
+    if(typeof this.state.seenIndexes === 'string') {
+      return [1,2,3]
     } else {
-      return ''
+      return this.state.seenIndexes.map(number => number).join(', ');
     }
   }
 
