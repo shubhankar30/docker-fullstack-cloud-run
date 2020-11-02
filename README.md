@@ -42,8 +42,6 @@ docker build -t gcr.io/${PROJECT_ID}/${IMAGE_NAME} ./client
 docker push gcr.io/${PROJECT_ID}/${IMAGE_NAME}
 ```
 
-
-
 Cleanup:
 ```
 docker volume rm $(docker volume ls -qf dangling=true)

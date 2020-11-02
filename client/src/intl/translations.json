@@ -1,0 +1,98 @@
+{
+  "en": {
+    "Loading": "Loading...",
+    "Verifying": "Verifying...",
+
+    "Login.Title": "Sign in",
+    "Form.Login.Identification": "Email address or Tel Number",
+    "Form.Login.Error.Identification": "Email address or Tel Number is required",
+    "Form.Login.Password": "Password",
+    "Form.Login.Error.Password": "Password is required",
+    "Form.Login.Submit": "Login",
+    "Form.Login.Forgot.Password": "Forgot Password",
+    "Form.Login.Forgot.Password.Reset": "Reset Password",
+    "Form.Show.Password": "Show password",
+
+    "Register.Verification": "Check mail. Verification sent.",
+    "Register.Title": "Register",
+    "Form.Register.Identification": "Email address or Tel Number",
+    "Form.Register.Error.Identification": "Email address or Tel Number is required",
+    "Form.Register.Password": "Password",
+    "Form.Register.Error.Password": "Password is required",
+    "Form.Register.Submit": "Register",
+    "Form.Register.Terms": "I have read the terms and conditions.",
+
+    "Form.Usercreation.Next" : "Next",
+    "Form.Usercreation.Previous" : "Previous",
+    "Form.Usercreation.Submit" : "Submit",
+    "Form.Usercreation.Skip" : "Skip",
+    "Form.Usercreation.Firstname" : "First Name",
+    "Form.Usercreation.Lastname" : "Last Name",
+    "Form.Usercreation.Dob" : "Date of birth",
+    "Form.Usercreation.Role" : "Role",
+    "Form.Usercreation.Phno" : "Phone number",
+
+    "Form.Usercreation.Firstpage.Title" : "Create Teacher or Student?",
+    "Form.Usercreation.Firstpage.Teacher" : "Teacher",
+    "Form.Usercreation.Firstpage.Student" : "Student",
+
+    "Form.Usercreation.Secondpage.Error.Firstname" : "Enter First Name",
+    "Form.Usercreation.Secondpage.Error.Lastname" : "Enter Last Name",
+
+    "Form.Usercreation.Secondpage.Title" : "Enter First Name and Last Name",
+    "Form.Usercreation.Thirdpage.Title" : "Enter Birth Date",
+    "Form.Usercreation.Fourthpage.Title" : "Upload Profile Photo",
+    "Form.Usercreation.Fifthpage.Title" : "Confirm the details",
+
+    "Page.Userselection.Button.Createnewuser" : "Create new user",
+    "Page.Userselection.Button.Nouserfound" : "No user found"
+  },
+  "ja": {
+    "Loading": "Loading...",
+    "Verifying": "Verifying...",
+
+    "Login.Title": "Sign in Arigato",
+    "Form.Login.Identification": "Email address or Tel Number",
+    "Form.Login.Error.Identification": "Email address or Tel Number is required",
+    "Form.Login.Password": "Password",
+    "Form.Login.Error.Password": "Password is required",
+    "Form.Login.Submit": "Login",
+    "Form.Login.Forgot.Password": "Forgot Password",
+    "Form.Login.Forgot.Password.Reset": "Reset Password",
+    "Form.Show.Password": "Show password",
+
+    "Register.Verification": "Check mail. Verification sent.",
+    "Register.Title": "Register",
+    "Form.Register.Identification": "Email address or Tel Number",
+    "Form.Register.Error.Identification": "Email address or Tel Number is required",
+    "Form.Register.Password": "Password",
+    "Form.Register.Error.Password": "Password is required",
+    "Form.Register.Submit": "Register",
+    "Form.Register.Terms": "I have read the terms and conditions.",
+
+    "Form.Usercreation.Next" : "Next",
+    "Form.Usercreation.Previous" : "Previous",
+    "Form.Usercreation.Submit" : "Submit",
+    "Form.Usercreation.Skip" : "Skip",
+    "Form.Usercreation.Firstname" : "First Name",
+    "Form.Usercreation.Lastname" : "Last Name",
+    "Form.Usercreation.Dob" : "Date of birth",
+    "Form.Usercreation.Role" : "Role",
+    "Form.Usercreation.Phno" : "Phone number",
+
+    "Form.Usercreation.Firstpage.Title" : "Create Teacher or Student?",
+    "Form.Usercreation.Firstpage.Teacher" : "Teacher",
+    "Form.Usercreation.Firstpage.Student" : "Student",
+
+    "Form.Usercreation.Secondpage.Error.Firstname" : "Enter First Name",
+    "Form.Usercreation.Secondpage.Error.Lastname" : "Enter Last Name",
+
+    "Form.Usercreation.Secondpage.Title" : "Enter First Name and Last Name",
+    "Form.Usercreation.Thirdpage.Title" : "Enter Birth Date",
+    "Form.Usercreation.Fourthpage.Title" : "Upload Profile Photo",
+    "Form.Usercreation.Fifthpage.Title" : "Confirm the details",
+
+    "Page.Userselection.Button.Createnewuser" : "Create new user",
+    "Page.Userselection.Button.Nouserfound" : "No user found"
+  }
+}
