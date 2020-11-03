@@ -1,13 +1,16 @@
 {
   "dependencies": {
     "express": "4.17.1",
+    "helmet": "4.2.0",
+    "sequelize": "6.3.5",
     "pg": "8.4.2",
+    "pg-hstore": "2.3.3",
     "cors": "2.8.5",
     "nodemon": "2.0.6",
     "body-parser": "*"
   },
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon --legacy-watch",
     "start": "node index.js"
   }
 }

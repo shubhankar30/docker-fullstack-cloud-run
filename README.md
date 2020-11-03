@@ -60,3 +60,16 @@ docker volume ls
 ## Misc
 Cloudbuild Cloud Run deployment permissions denied
 https://stackoverflow.com/questions/62783869/why-am-i-seeing-this-error-error-gcloud-run-deploy-permission-denied-the-c
+
+https://www.alibabacloud.com/blog/building-a-restful-api-with-express-postgresql-and-node-using-es6_594137
+
+https://stackoverflow.com/questions/21105748/sequelize-js-how-to-use-migrations-and-sync
+
+```
+...
+"scripts": {
+  "dev": "grunt && sequelize db:migrate && sequelize db:seed:all && node bin/www",
+  "start": "sequelize db:migrate && sequelize db:seed:all && node bin/www"
+},
+...
+```
