@@ -11,6 +11,6 @@
   },
   "scripts": {
     "dev": "nodemon --legacy-watch",
-    "start": "node index.js"
+    "start": "NODE_ENV=production node index.js"
   }
 }
