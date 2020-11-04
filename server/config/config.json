@@ -3,21 +3,24 @@
     "username": "postgres",
     "password": "postgres_password",
     "database": "postgres",
-    "host": "/cloudsql/futura-data-logger-development:asia-east1:development",
-    "dialect": "postgres"
+    "host": "postgres",
+    "dialect": "postgres",
+    "port": 5432
   },
   "test": {
     "username": "postgres",
     "password": "postgres_password",
     "database": "postgres",
     "host": "postgres",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "port": 5432
   },
   "production": {
     "username": "postgres",
     "password": "password",
     "database": "postgres",
-    "host": "104.155.230.250",
-    "dialect": "postgres"
+    "host": "/cloudsql/futura-data-logger-development:asia-east1:development",
+    "dialect": "postgres",
+    "port": 5432
   }
 }
