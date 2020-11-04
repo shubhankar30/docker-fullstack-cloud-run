@@ -36,6 +36,12 @@ steps:
   - '--platform'
   - 'managed'
   - '--allow-unauthenticated'
+  env:
+    - PGUSER=postgres
+    - PGHOST=104.155.230.250
+    - PGDATABASE=postgres
+    - PGPASSWORD=password
+    - PGPORT=5432
 - name: 'gcr.io/cloud-builders/gcloud'
   args:
   - 'run'

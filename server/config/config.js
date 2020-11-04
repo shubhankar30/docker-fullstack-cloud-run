@@ -15,10 +15,10 @@ module.exports = {
     "dialect": "postgres"
   },
   "production": {
-    "username": keys.pgUser,
-    "password": keys.pgPassword,
-    "database": keys.pgDatabase,
-    "host": keys.pgHost,
+    "username": 'postgres',
+    "password": 'password',
+    "database": 'postgres',
+    "host": '104.155.230.250',
     "dialect": "postgres"
   }
 }
