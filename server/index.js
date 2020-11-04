@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 routes(app);
 
 const db = require("./models");
-db.sequelize.sync();
+// db.sequelize.sync();
 
 // In development, you may need to drop existing tables and re-sync database. Just use force: true as following code:
 // db.sequelize.sync({ force: true }).then(() => {
@@ -67,6 +67,8 @@ app.get('*', (req, res) => res.status(200).send({
 }));
 
 const port = process.env.PORT || 8080;
-app.listen(port, err => {
-  console.log('Listening');
+db.sequelize.sync().then(() => {
+  app.listen(port, err => {
+    console.log('Listening');
+  });
 });

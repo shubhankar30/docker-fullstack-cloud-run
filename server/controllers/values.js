@@ -4,11 +4,19 @@ const models = require('../models/index');
 const { Value } = models;
 
 class Values {
-  static async getAllValues (req, res) {
+  static getAllValues (req, res) {
     console.log("GET ALL VALUES API CONTROLLER");
     // const allValues = await models.Value.findAll({}).map(el => el.get({ plain: true }));
-    const allValues = await models.Value.findAll({raw:true});
-    console.log(allValues);
+    models.Value.findAll({raw:true})
+    .then(allValues => {
+      console.log(allValues);
+      if(allValues && allValues.length > 0) {
+        const temp = allValues.map(tp => tp.value)
+        res.status(200).send(temp);
+      } else {
+        res.status(200).send([1, 2, 3, 4, 5, 6, 7]);
+      }
+    });
     // return User
     //   .create({
     //     name,
@@ -21,12 +29,7 @@ class Values {
     //     message: 'User successfully created',
     //     userData
     //   }))
-    if(allValues && allValues.length > 0) {
-      const temp = allValues.map(tp => tp.value)
-      res.status(200).send(temp);
-    } else {
-      res.status(200).send([1, 2, 3, 4, 5, 6, 7]);
-    }
+
   }
   static addValue(req, res) {
     const { value } = req.body
