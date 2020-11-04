@@ -3,7 +3,7 @@
     "username": "postgres",
     "password": "postgres_password",
     "database": "postgres",
-    "host": "postgres",
+    "host": "/cloudsql/futura-data-logger-development:asia-east1:development",
     "dialect": "postgres"
   },
   "test": {
